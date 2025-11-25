@@ -1,5 +1,5 @@
 common:
-  containerRegistryURL: devopsinsidersacr235.azurecr.io
+  containerRegistryURL: bestacr12345.azurecr.io
   ingressClass: azure-application-gateway
   
 ui:
@@ -10,7 +10,7 @@ ui:
   port: 80
   ServicePort: 80
   ingress:
-    host: ui.jhandu.shop
+    host: dev-ui.vishal.shop
 
 getTask:
   replicas: 2
@@ -27,7 +27,7 @@ getTask:
 deleteTask:
   replicas: 2
   image:
-    name: todo-delete-tasks-api
+    name: todo-delete-tasks-api 
     tag: v1
   port: 8000
   ServicePort: 80
@@ -39,7 +39,7 @@ deleteTask:
 addTask:
   replicas: 2
   image:
-    name: todo-add-tasks-api
+    name: todo-add-tasks-api 
     tag: v1
   port: 8000
   ServicePort: 80
