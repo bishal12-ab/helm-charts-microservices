@@ -14,39 +14,39 @@ ui:
 
 
 getTask:
-  replicas: 2
+  replicas: 
   image:
     name: todo-get-tasks-api  
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:bishaldb.database.windows.net,1433;Database=tododb;Uid=sqladminuser;Pwd=SqlAdmin@12345;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:vishalsqlserver123.database.windows.net,1433;Database=vishalsqldb;Uid=sqladminuser;Pwd=SqlAdmin@12345;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: dev-get-tasks-api.jhandu.shop
     ingressClass: azure-application-gateway
 
 
 deleteTask:
-  replicas: 2
+  replicas: 1
   image:
     name: todo-delete-tasks-api
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:bishaldb.database.windows.net,1433;Database=tododb;Uid=sqladminuser;Pwd=SqlAdmin@12345;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:vishalsqlserver123.database.windows.net,1433;Database=vishalsqldb;Uid=sqladminuser;Pwd=SqlAdmin@12345;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: dev-delete-task-api.jhandu.shop
     ingressClass: azure-application-gateway
 
 
 addTask:
-  replicas: 2
+  replicas: 1
   image:
     name: todo-add-tasks-api
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:bishaldb.database.windows.net,1433;Database=tododb;Uid=sqladminuser;Pwd=SqlAdmin@12345;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:vishalsqlserver123.database.windows.net,1433;Database=vishalsqldb;Uid=sqladminuser;Pwd=SqlAdmin@12345;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: dev-add-task-api.jhandu.shop
     ingressClass: azure-application-gateway
